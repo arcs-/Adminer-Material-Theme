@@ -13,7 +13,8 @@ Adminer: [Adminer][1].
 * You will have to downlaod [Adminer][1] itself.. 
 * And downlaod the [adminer.css][2] from here
 * Put them both in a folder - done
-* 
+
+
 ### Preview
 <img src="http://stillhart.biz/project/adminer/example.png" alt="a preview"/>
 
