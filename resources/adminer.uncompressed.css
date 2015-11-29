@@ -23,6 +23,9 @@ body {
   width: 0.5em;
   background-color: #CCC
 }
+::-webkit-scrollbar-corner{
+  background-color: #CCC
+}
 ::-webkit-scrollbar-thumb {
   background-color: #263238
 }
