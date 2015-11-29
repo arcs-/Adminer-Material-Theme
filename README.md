@@ -11,8 +11,8 @@ Adminer: [Adminer](https://www.adminer.org/).
 
 ### Usage
 * You will have to downlaod [Adminer](https://www.adminer.org/) itself.. 
-* And downlaod the [adminer.css](https://github.com/arcs-/Adminer-Material-Theme/archive/master.zip) from here
-* Put them both in a folder - done
+* And downlaod the [adminer.css](https://github.com/arcs-/Adminer-Material-Theme/releases/download/v1.0/adminer.css) from here
+* Put them both in a folder so they can get old and happy - done
 
 
 ### Preview
