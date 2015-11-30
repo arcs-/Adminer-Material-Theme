@@ -17,4 +17,4 @@ Adminer: [Adminer](https://www.adminer.org/).
 
 ### Preview
 <img src="http://stillhart.biz/project/adminer/preview.png" alt="a preview"/>
-<img src="http://stillhart.biz/project/adminer/preview.png2" alt="a preview"/>
+<img src="http://stillhart.biz/project/adminer/preview2.png" alt="a preview"/>
