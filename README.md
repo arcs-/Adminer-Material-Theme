@@ -11,9 +11,10 @@ Adminer: [Adminer](https://www.adminer.org/).
 
 ### Usage
 * You'll need [Adminer](https://www.adminer.org/) itself
-* And downlaod the [adminer.css](https://github.com/arcs-/Adminer-Material-Theme/archive/master.zip) theme from here
+* And downlaod the [adminer.css](https://github.com/arcs-/Adminer-Material-Theme/releases) theme from here
 * Put them both in a folder - done
 
 
 ### Preview
 <img src="http://stillhart.biz/project/adminer/preview.png" alt="a preview"/>
+<img src="http://stillhart.biz/project/adminer/preview.png2" alt="a preview"/>
