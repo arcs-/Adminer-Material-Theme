@@ -7,7 +7,8 @@ body {
   display: flex;
   height: 100vh;
   overflow: hidden;
-  font-family: 'Roboto';
+  font-family: 'Roboto', Arial;
+  text-rendering: optimizeLegibility !important;
   background: #FAFAFA;
 }
 ::selection {
@@ -34,7 +35,7 @@ body {
 /*------------*/
 #lang {
   position: fixed;
-  top: initial;
+  top: auto;
   bottom: 0;
   z-index: 1;
   padding: .8em 1em;
@@ -99,14 +100,14 @@ p#tables a:hover {
   background: #F1F1F1;
 }
 #menu .active {
-  font-weight: initial;
+  font-weight: auto;
   color: #fff!important;
   background: #6500A5!important;
 }
 #menu .links a:hover,
 #tables .select:hover {
   text-decoration: none;
-  font-weight: initial;
+  font-weight: auto;
   color: #fff;
   background: #6500A5;
 }
@@ -114,7 +115,7 @@ p#tables a:hover {
   width: 86%;
 }
 #tables .select {
-  width: initial;
+  width: auto;
   margin: 3px 5px 0 0;
   position: relative;
   border: 1px solid #6500A5;
@@ -153,7 +154,7 @@ p#tables a:hover {
   min-width: 600px;
   overflow-x: auto;
   margin: 83px 0 0 19em;
-  padding: 17px 28px 100px 28px;
+  padding: 17px 27px 100px;
 }
 #content h2 {
   position: fixed;
@@ -366,7 +367,7 @@ td {
     background: #fff;
 }
 th a, td a, th a:visited, td a:visited {
-  font-weight: bold;
+  font-weight: 700;
   color: #6500A5;
 }
 .js .checkable .checked td, .js .checkable .checked th {
@@ -402,6 +403,7 @@ sup, #noindex {
   background: #000;
   width: 24px;
   height: 24px;
+  filter: contrast(125%) blur(0.4px) invert(1);
   -webkit-filter: contrast(125%) blur(0.4px) invert(1);
   opacity: 0.8;
   border-radius: 2px;
