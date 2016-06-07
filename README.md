@@ -4,7 +4,7 @@ A theme for Adminer inspired the material design language.
 
 [Adminer](https://www.adminer.org/) is one of the best DB-Management tools out there...
 
-... with the catch that it doesn't look good any good at all.
+... with the catch that it doesn't look any good at all.
 
 ### Usage
 * Get a copy of [Adminer](https://www.adminer.org/).
