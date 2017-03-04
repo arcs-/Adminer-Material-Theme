@@ -1,0 +1,565 @@
+/*
+ * Material Design for Adminer
+ * By Patrick Stillhart [https://stillhart.biz/]
+ * Converted to SASS-ready file by Troy Meier [https://twkm.ca]
+ */
+
+$header-background-color: #2D2D2D;
+
+$primary-color: #0da900;
+$primary-color-light: lighten($primary-color, 10%);
+$primary-color-dark: darken($primary-color, 20%);
+
+$inactive-color: #AFB3B5;
+$inactive-color-light: lighten($inactive-color, 20%);
+
+@mixin hover-links {
+  text-decoration: none;
+  font-weight: auto;
+  color: #fff;
+  background: $primary-color;
+}
+
+@import url(//fonts.googleapis.com/css?family=Roboto:400,700);
+body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Roboto', Arial;
+  text-rendering: optimizeLegibility !important;
+  background: #FAFAFA;
+}
+::selection {
+  color: #fff;
+  background: $primary-color-light;
+}
+::-moz-selection {
+  color: #fff;
+  background: $primary-color-light;
+}
+::-webkit-scrollbar {
+  height: 0.8em;
+  width: 0.5em;
+  background-color: #CCC;
+}
+::-webkit-scrollbar-corner{
+  background-color: #CCC;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $header-background-color;
+}
+
+/*    Menu    */
+/*------------*/
+#lang {
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  z-index: 1;
+  padding: .8em 1em;
+  width: 245px;
+
+  select {
+    width: 66%;
+  }
+
+}
+
+#menu {
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  top: 0 ;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #fff;
+  /* second numer is offset top */
+  box-shadow: 0 85px 5px 0 rgba(0,0,0,.14),0 85px 10px 0 rgba(0,0,0,.12),0 85px 4px -1px rgba(0,0,0,.2);
+
+  h1 {
+    height: 48px;
+    line-height: 75px;
+    color: $inactive-color;
+    background: $header-background-color;
+    border-bottom: none;
+  }
+
+  select {
+    width: 86%;
+  }
+
+  #logins {
+      padding: 10px 14px 0;
+      height: 100%
+  }
+  #menu #logins a {
+      width: 92%;
+      background: #fff;
+      display: inline-block;
+      padding: 10px;
+      margin: 4px 0;
+      text-decoration: none
+  }
+  #menu #logins a:hover {
+      color: #000;
+      background: #CCC
+  }
+
+
+  &.active {
+    font-weight: auto;
+    color: #fff!important;
+    background: $primary-color!important;
+  }
+
+  .links {
+    a {
+        width: 44%;
+        margin: 0;
+        padding: 5px;
+        border-radius: 2px;
+        display: inline-block;
+        margin-top: 5px;
+        text-align: center;
+        color: $header-background-color;
+        border: 1px solid $primary-color;
+
+        &:hover {
+          @include hover-links;
+        }
+    }
+  }
+}
+
+a{
+  #h1 {
+    color: $inactive-color;
+  }
+}
+.version {
+    color: $inactive-color;
+}
+
+#tables {
+  padding: 9px 12px 0 6px;
+  flex: 1;
+  margin-bottom: 47px;
+  overflow-x: hidden!important;
+
+  .select:hover {
+    @include hover-links;
+  }
+
+  a {
+    padding: 6px 0px 6px 8px;
+    border-radius: 2px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 175px;
+
+    &:hover {
+      color: #000;
+      text-decoration: none;
+      background: $inactive-color-light;
+    }
+  }
+
+  .select {
+    width: auto;
+    margin: 3px 5px 0 0;
+    position: relative;
+    border: 1px solid $primary-color;
+    padding: 2px 8px;
+    border-radius: 2px;
+    float: right;
+  }
+}
+
+
+#logins a, #tables a, #tables span {
+  display: block;
+}
+
+/*    Nav     */
+/*------------*/
+#content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 600px;
+  overflow-x: auto;
+  margin: 83px 0 0 19em;
+  padding: 17px 27px 100px;
+
+  h2 {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    padding-left: 30px;
+    margin-left: -28px;
+    line-height: 104px;
+    height: 65px;
+    padding-top: 0;
+    color: $inactive-color;
+    background: $header-background-color;
+  }
+}
+
+#breadcrumb {
+  position: fixed;
+  padding-left: 20px;
+  padding-top: 10px;
+  color: $header-background-color;
+  background: $header-background-color;
+  z-index: 2;
+
+  a {
+    color: #fff;
+  }
+}
+
+#logout {
+  position: fixed;
+  z-index: 2;
+  right: 50px;
+  top: 21px;
+  border: none;
+  padding: 8px 30px;
+  border-radius: 2px;
+  color: #fff;
+  background: $primary-color;
+  cursor: pointer;
+
+  &:hover {
+    background: $primary-color-dark;
+  }
+}
+
+/*    Element    */
+/*---------------*/
+/* http://codepen.io/mel/pen/BKjzm */
+select {
+  padding:3px;
+  margin: 0;
+  border-radius:2px;
+  color:#666;
+  border:none;
+  cursor:pointer;
+    border: 1px solid rgba(0,0,0,.12);
+}
+a {
+  color: $header-background-color;
+}
+input:not([type]), input[type=password], input[type=search], input[type=number] { /* text */
+  border: 1px solid rgba(0,0,0,.12);
+  font-size: 16px;
+  margin-bottom: 6px;
+  padding: 8px;
+}
+input[type=submit] {
+  height: 36px;
+  min-width: 64px;
+  padding: 0 16px;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  border: none;
+  color: #fff;
+  background: $primary-color;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background: $primary-color-dark;
+}
+input[type=button][disabled],
+input[type=submit][disabled] {
+    background: $inactive-color!important;
+    color: invert($inactive-color);
+    cursor: default;
+}
+div input[name=delete],
+div input[name=drop],
+div input[name=truncate] {
+  background: repeating-linear-gradient(
+    -55deg,
+    $primary-color,
+    $primary-color 5px,
+    $primary-color-light 5px,
+    $primary-color-light 10px
+  );
+}
+input[type=checkbox] {
+    -webkit-appearance: none;
+    padding-left: 25px;
+    height: 20px;
+    display: inline-block;
+    line-height: 20px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+    background-size: 20px;
+    background-image: url('//cdn.rawgit.com/arcs-/Adminer-Material-Theme/master/resources/check.svg');
+    -webkit-user-select: none;
+    user-select: none;
+    outline: 0
+}
+input[type=checkbox]:checked {
+    background-position: 0 -20px
+}
+input[type=radio] {
+    -webkit-appearance: none;
+    padding-left: 25px;
+    height: 20px;
+    display: inline-block;
+    line-height: 20px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+    background-size: 20px;
+    background-image: url('//cdn.rawgit.com/arcs-/Adminer-Material-Theme/master/resources/radio.svg');
+    -webkit-user-select: none;
+    user-select: none;
+    outline: 0
+}
+input[type=radio]:checked {
+    background-position: 0 -21px
+}
+input[type=number] {
+    padding: 8px;
+}
+#help {
+  display: none;
+}
+.sqlarea.jush-sql.jush {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.12)!important;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+.js .column {
+  padding: 7px 2px 7px 5px;
+  margin: -7px 0 0 3px;
+  border-radius: 2px;
+  background: #ccc;
+  border: 1px solid rgba(0,0,0,.12);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+.js .column a {
+  padding: 2px 9px 2px 4px;
+  margin-right: 3px;
+  color: $header-background-color;
+  border-radius: 2px;
+  border: 1px solid $primary-color;
+}
+.js .column a:hover {
+  color: #fff;
+  background: $primary-color;
+}
+/*    Table      */
+/*---------------*/
+table {
+  order: 1;
+  min-width: 600px;
+  margin: 25px 0;
+  border: 1px solid rgba(0,0,0,.12);
+  border-collapse: collapse;
+  white-space: nowrap;
+  font-size: 13px;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+form table {
+  width: 100%;
+}
+thead td, thead th {
+    background: #fff;
+}
+thead th {
+  text-align: left;
+  padding: 0 18px;
+}
+th {
+  width: 20%;
+  background: #fff;
+  border-right: none;
+  padding: 5px 18px!important;
+  font-size: 14px;
+  font-weight: normal;
+  padding-bottom: 8px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+  border-right: 1px solid rgba(0,0,0,.12);
+}
+td {
+  color: #000;
+  border-right: none;
+  height: 45px;
+  padding: 2px 10px 0px 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+  border-right: 1px solid rgba(0,0,0,.12);
+}
+.odd td {
+    background: #fff;
+}
+th a, td a, th a:visited, td a:visited {
+  font-weight: 700;
+  color: $primary-color;
+}
+.js .checkable .checked td, .js .checkable .checked th {
+  background: #e0e0e0;
+}
+sup, #noindex {
+  display: none
+}
+.pages {
+  position: absolute;
+  border: 1px solid rgba(0,0,0,.12);
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+  font-size: 15px;
+  height: 35px;
+  padding-top: 10px;
+  padding: 9px 20px 0 20px;
+
+  a:not(:first-child) {
+    padding: 5px;
+    border-radius: 2px;
+    margin-top: 5px;
+    text-align: center;
+    color: $header-background-color;
+    border: 1px solid $primary-color;
+  }
+
+  a:not(:first-child):hover {
+    text-decoration: none;
+    color: #fff;
+    background: $primary-color;
+  }
+}
+
+.icon {
+  background: #000;
+  width: 24px;
+  height: 24px;
+  filter: contrast(125%) blur(0.4px) invert(1);
+  -webkit-filter: contrast(125%) blur(0.4px) invert(1);
+  opacity: 0.8;
+  border-radius: 2px;
+
+  &:hover {
+    background: #5EF300;
+  }
+}
+
+/*    content      */
+/*-----------------*/
+
+#content {
+  
+  form {
+    order: 1;
+    display: table;
+  }
+
+  select {
+    padding: 10px;
+  }
+
+  .links, h3 {
+    order: 4;
+    margin: 15px 0 0 0;
+  }
+
+  .links {
+
+    &:nth-of-type(2){
+      order: 1;
+      margin-top: 30px;
+    }
+
+    a {
+      padding: 5px;
+      border-radius: 2px;
+      margin-top: 5px;
+      text-align: center;
+      color: $header-background-color;
+      border: 1px solid $primary-color;
+
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+        background: $primary-color;
+      }
+    }
+
+    .active {
+      font-weight: normal;
+      color: #fff;
+      background: $primary-color;
+    }
+
+  }
+
+  fieldset:first-of-type { /* search */
+    position: relative;
+    border: none;
+    float: right;
+    margin-right: -12px;
+    margin-top: -27px;
+
+    legend{
+      display: none
+    }
+  }
+
+  fieldset:nth-of-type(2),
+  fieldset:nth-of-type(3),
+  fieldset:nth-of-type(4),
+  fieldset:nth-of-type(5) { /* workbox */
+    padding-bottom: 16px;
+    min-height: 58px;
+    border: 1px solid rgba(0,0,0,.12);
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    margin-bottom: 10px;
+  }
+
+  fieldset:nth-of-type(6) {
+    border: none;
+  }
+
+  h3:first-of-type {
+    display: none;
+  }
+
+  form:first-of-type {
+    order: 2;
+  }
+  
+  input[name=copy],
+  input[name=move] {
+    float:right;
+    margin-right: -20px;
+    margin-left: 25px;
+  }
+
+  input[name=copy], input[name=move] {
+    float:right;
+    margin-right: -20px;
+    margin-left: 25px;
+  }
+
+  select {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+}
