@@ -1,24 +1,21 @@
 # Adminer-Material-Theme
 
-A theme for Adminer inspired the material design language.
+A new theme for Adminer which is inspired the material design language.
 
-[Adminer](https://www.adminer.org/) is one of the best DB-Management tools out there...
-
-... with the catch that it doesn't look any good at all.
+[Adminer](https://www.adminer.org/) is one of the best DB-Management tools out there... with the catch that it doesn't look any good at all.
 
 ### Usage
 * Get a copy of [Adminer](https://www.adminer.org/).
-* Download the adminer.css (or adminer.scss, see the Customization section below) from this project.
+* Download the adminer.css (or adminer.scss, see the customization section below) from this project.
 * Put them both in the same web folder.
 * You are done.
 
 ### Customization
-* A SASS file is available in the ``/resources`` folder, allowing you to set the primary colour, inactive colour, and header colour to customize the theme to your tastes. 
-* The SASS file was adapted from the uncompressed CSS file, available [here](https://raw.githubusercontent.com/arcs-/Adminer-Material-Theme/master/resources/adminer.uncompressed.css).
+* A SASS file is available under ``/src``, allowing you to set the primary color, inactive color, and header color to customize the theme to your taste. You may then run the grunt task.
 
 ### Notes
 * Works best in Google Chrome
-* Please report render issues
+* Please report rendering issues
 
 ### Preview
 <img src="http://stillhart.biz/project/adminer/preview.png" alt="a preview"/>

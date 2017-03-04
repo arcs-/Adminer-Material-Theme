@@ -1,0 +1,611 @@
+/*!
+ * Material Design for Adminer
+ * By Patrick Stillhart [https://stillhart.biz/]
+ * Converted to SASS-ready file by Troy Meier [https://twkm.ca]
+ */
+
+$header-background-color: #263238;
+
+$primary-color: #1565C0;
+$primary-color-light: lighten($primary-color, 10%);
+$primary-color-dark: darken($primary-color, 20%);
+
+$inactive-color: #AFB3B5;
+$inactive-color-light: lighten($inactive-color, 20%);
+
+$checkbox-link: "//cdn.rawgit.com/arcs-/Adminer-Material-Theme/master/src/check.svg";
+$radio-link: "//cdn.rawgit.com/arcs-/Adminer-Material-Theme/master/src/radio.svg";
+
+$font-link: "https://fonts.googleapis.com/css?family=Noto+Sans:400,700";
+$font: "Noto Sans", sans-serif;
+
+@mixin hover-links {
+  background: $primary-color;
+  color: #fff;
+  text-decoration: none;
+  font-weight: auto;
+}
+
+@import url(#{$font-link});
+body {
+  display: flex;
+  overflow: hidden;
+  height: 100vh;
+  background: #FAFAFA;
+  font-family: $font;
+
+  text-rendering: optimizeLegibility !important;
+}
+::selection {
+  background: $primary-color-light;
+  color: #fff;
+}
+::-moz-selection {
+  background: $primary-color-light;
+  color: #fff;
+}
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.8em;
+  background-color: #CCC;
+}
+::-webkit-scrollbar-corner{
+  background-color: #CCC;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $header-background-color;
+}
+
+/*    Menu    */
+/*------------*/
+#lang {
+  position: fixed;
+  top: auto;
+  bottom: 0;
+  z-index: 1;
+  padding: .8em 1em;
+  width: 245px;
+  border-top: 1px solid #ccc;
+  background: #fff;
+  select {
+    width: 66%;
+  }
+
+}
+
+#menu {
+  position: fixed;
+  top: 0 ;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #fff;
+  /* second numer is offset top */
+  box-shadow: 0 85px 5px 0 rgba(0,0,0,.14),0 85px 10px 0 rgba(0,0,0,.12),0 85px 4px -1px rgba(0,0,0,.2);
+
+  flex-flow: column;
+
+  h1 {
+    height: 48px;
+    border-bottom: none;
+    background: $header-background-color;
+    color: $inactive-color;
+    line-height: 75px;
+  }
+
+  select {
+    width: 86%;
+  }
+
+  #logins {
+      padding: 10px 14px 0;
+      height: 100%
+  }
+  #menu #logins a {
+      display: inline-block;
+      margin: 4px 0;
+      padding: 10px;      width: 92%;
+      background: #fff;
+      text-decoration: none
+  }
+  #menu #logins a:hover {
+      background: #CCC;      color: #000;
+  }
+
+
+  &.active {
+    background: $primary-color!important;
+    color: #fff!important;
+    font-weight: auto;
+  }
+
+  .links {
+    a {
+        display: inline-block;
+        margin: 4px 2px;
+        padding: 5px;        width: 42%;
+        border-radius: 2px;
+        background: #fff;
+      //  box-shadow: 0 1px 4px rgba(88, 88, 88, 0.41), 0 2px 3px rgba(88, 88, 88, 0.26);
+        color: $primary-color;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 24px;
+        transition: all .2s;
+
+        &:hover {
+          @include hover-links;
+        }
+    }
+  }
+}
+
+a{
+  #h1 {
+    color: $inactive-color;
+  }
+}
+.version {
+    color: $inactive-color;
+}
+
+#tables {
+  overflow-x: hidden!important;
+  margin-bottom: 47px;
+  padding: 9px 12px 0 6px;
+
+  flex: 1;
+
+  .select:hover {
+    @include hover-links;
+  }
+
+  a {
+    display: inline-block;
+    overflow: hidden;
+    padding: 6px 0px 6px 8px;
+    width: 175px;
+    border-radius: 2px;
+    text-overflow: ellipsis;
+    transition: all .2s;
+
+    &:hover {
+      background: $inactive-color-light;
+      color: #000;
+      text-decoration: none;
+    }
+  }
+
+  .select {
+    position: relative;
+    float: right;
+    padding: 2px 8px;
+    padding: 5px;
+    width: auto;
+    border-radius: 2px;
+    background: #fff;
+    //box-shadow: 0 1px 4px rgba(88, 88, 88, 0.41), 0 2px 3px rgba(88, 88, 88, 0.26);
+    color: $primary-color;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+/*    Nav     */
+/*------------*/
+#content {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  margin: 83px 0 0 19em;
+  padding: 17px 27px 100px;
+  min-width: 600px;
+  width: 100%;
+
+  h2 {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    margin-left: -28px;
+    padding-top: 0;
+    padding-left: 30px;
+    width: 100%;
+    height: 65px;
+    background: $header-background-color;
+    color: $inactive-color;
+    line-height: 104px;
+  }
+}
+
+#breadcrumb {
+  position: fixed;
+  z-index: 2;
+  padding-top: 10px;
+  padding-left: 20px;
+  background: $header-background-color;
+  color: $header-background-color;
+
+  a {
+    color: #AFB3B5;
+    font-size: 13px;
+    line-height: 18px;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: none;
+    }
+  }
+
+}
+
+#logout {
+  position: fixed;
+  top: 21px;
+  right: 50px;
+  z-index: 2;
+  margin: 4px 2px;
+  padding: 5px;
+  min-width: 88px;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  background: $primary-color;
+  box-shadow: 0 1px 4px rgba(88, 88, 88, 0.41), 0 2px 3px rgba(88, 88, 88, 0.26);
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 24px;
+  transition: all .2s;
+
+  &:hover {
+    background: $primary-color-dark;
+  }
+}
+
+/*    Element    */
+/*---------------*/
+select {
+  margin: 0;
+  padding:3px;
+  border:none;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius:2px;
+  color:#666;
+  cursor:pointer;
+}
+a {
+  color: $header-background-color;
+}
+input:not([type]), input[type=password], input[type=search], input[type=number] {
+  margin-bottom: 6px;
+  padding: 8px; /* text */
+  border: 1px solid rgba(0,0,0,.12);
+  font-size: 16px;
+}
+input[type=submit] {
+  padding: 0 16px;
+  min-width: 64px;
+  height: 36px;
+  border: none;
+  border-radius: 2px;
+  background: $primary-color;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background: $primary-color-dark;
+}
+input[type=button][disabled],
+input[type=submit][disabled] {
+    background: $inactive-color!important;
+    color: invert($inactive-color);
+    cursor: default;
+}
+div input[name=delete],
+div input[name=drop],
+div input[name=truncate] {
+  background: repeating-linear-gradient(
+    -55deg,
+    $primary-color,
+    $primary-color 5px,
+    $primary-color-light 5px,
+    $primary-color-light 10px
+  );
+}
+input[type=checkbox] {
+    display: inline-block;
+    padding-left: 25px;
+    height: 20px;
+    outline: 0;
+    background-image: url(#{$checkbox-link});
+    background-position: 0 0;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+
+    -webkit-appearance: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+input[type=checkbox]:checked {
+    background-position: 0 -20px
+}
+input[type=radio] {
+    display: inline-block;
+    padding-left: 25px;
+    height: 20px;
+    outline: 0;
+    background-image: url(#{$radio-link});
+    background-position: 0 0;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+
+    -webkit-appearance: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+input[type=radio]:checked {
+    background-position: 0 -21px
+}
+input[type=number] {
+    padding: 8px;
+}
+#help {
+  display: none;
+}
+.sqlarea.jush-sql.jush {
+  border: 1px solid rgba(0,0,0,.12)!important;
+  background: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+.js .column {
+  margin: -7px 0 0 3px;
+  padding: 7px 2px 7px 5px;
+  border: 1px solid rgba(0,0,0,.12);
+  border-radius: 2px;
+  background: #ccc;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+}
+.js .column a {
+  margin-right: 3px;
+  padding: 2px 9px 2px 4px;
+  border: 1px solid $primary-color;
+  border-radius: 2px;
+  color: $header-background-color;
+}
+.js .column a:hover {
+  background: $primary-color;
+  color: #fff;
+}
+/*    Table      */
+/*---------------*/
+table {
+  margin: 25px 0;
+  min-width: 600px;
+  border: 1px solid rgba(0,0,0,.12);
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(88, 88, 88, 0.41), 0 2px 3px rgba(88, 88, 88, 0.26);
+  white-space: nowrap;
+  font-size: 13px;
+
+  order: 1;
+}
+form table {
+  width: 100%;
+}
+thead td, thead th {
+    background: #fff;
+}
+thead th {
+  padding: 0 18px;
+  text-align: left;
+}
+th {
+  box-sizing: border-box;
+  padding: 5px 18px!important;
+  padding-bottom: 8px;
+  width: 20%;
+  border-right: none;
+  border-right: 1px solid rgba(0,0,0,.12);
+  border-bottom: 1px solid rgba(0,0,0,.12);
+  background: #fff;
+  font-weight: normal;
+  font-size: 14px;
+}
+td {
+  box-sizing: border-box;
+  padding: 2px 10px 0px 10px;
+  height: 45px;
+  border-right: none;
+  border-right: 1px solid rgba(0,0,0,.12);
+  border-bottom: 1px solid rgba(0,0,0,.12);
+  color: #000;
+}
+.odd td {
+    background: #fff;
+}
+th a, td a, th a:visited, td a:visited {
+  color: $primary-color;
+  font-weight: 700;
+}
+.js .checkable .checked td, .js .checkable .checked th {
+  background: #e0e0e0;
+}
+sup, #noindex {
+  display: none
+}
+.pages {
+  position: absolute;
+  padding: 9px 20px 0 20px;
+  padding-top: 10px;
+  height: 35px;
+  border: 1px solid rgba(0,0,0,.12);
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+  font-size: 15px;
+
+  a:not(:first-child) {
+    margin-top: 5px;
+    padding: 5px;
+    border: 1px solid $primary-color;
+    border-radius: 2px;
+    color: $header-background-color;
+    text-align: center;
+  }
+
+  a:not(:first-child):hover {
+    background: $primary-color;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  background: #000;
+  opacity: 0.8;
+  -webkit-filter: contrast(125%) blur(0.4px) invert(1);
+  filter: contrast(125%) blur(0.4px) invert(1);
+  transition: all .2s;
+
+  &:hover {
+    background: invert($primary-color);
+  }
+}
+
+/*    content      */
+/*-----------------*/
+
+#content {
+
+  form {
+    display: table;
+
+    order: 1;
+  }
+
+  select {
+    padding: 10px;
+  }
+
+  .links, h3 {
+    margin: 15px 0 0 0;
+
+    order: 4;
+  }
+
+  .links {
+
+    &:nth-of-type(2){
+      margin-top: 30px;
+
+      order: 1;
+    }
+
+    a {
+      display: inline-block;      margin: 4px 4px;      padding: 6px 12px;      min-width: 88px;      border-radius: 2px;      background: #fff;      box-shadow: 0 1px 4px rgba(88, 88, 88, 0.41), 0 2px 3px rgba(88, 88, 88, 0.26);      color: $primary-color;      text-align: center;      text-transform: uppercase;      font-weight: bold;      font-size: 13px;      line-height: 24px;
+      transition: all .2s;
+
+      &:hover {
+        background: $primary-color;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+
+    .active {
+      background: $primary-color;
+      color: #fff;      cursor: default;    }
+
+  }
+
+  fieldset:first-of-type { /* search */
+    position: relative;
+    float: right;
+    margin-top: -27px;
+    margin-right: -12px;
+    border: none;
+
+    legend{
+      display: none
+    }
+  }
+
+  fieldset:nth-of-type(2),
+  fieldset:nth-of-type(3),
+  fieldset:nth-of-type(4),
+  fieldset:nth-of-type(5) {
+    margin-bottom: 10px; /* workbox */
+    padding-bottom: 16px;
+    min-height: 58px;
+    border: 1px solid rgba(0,0,0,.12);
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+  }
+
+  fieldset:nth-of-type(6) {
+    border: none;
+  }
+
+  legend a {
+    padding: 5px;
+    color: $primary-color;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 18px;
+
+    &:hover {
+      color: $primary-color-dark;
+      text-decoration: none;
+    }
+  }
+
+
+  h3:first-of-type {
+    display: none;
+  }
+
+  form:first-of-type {
+    order: 2;
+  }
+
+  input[name=copy],
+  input[name=move] {
+    float:right;
+    margin-right: -20px;
+    margin-left: 25px;
+  }
+
+  input[name=copy], input[name=move] {
+    float:right;
+    margin-right: -20px;
+    margin-left: 25px;
+  }
+
+  select {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+}

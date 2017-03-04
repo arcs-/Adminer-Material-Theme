@@ -1,0 +1,20 @@
+{
+  "name": "adminer-material-theme",
+  "version": "1.0.0",
+  "description": "A theme for Adminer inspired the material design language.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arcs-/Adminer-Material-Theme.git"
+  },
+  "author": "Patrick Stillhart",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arcs-/Adminer-Material-Theme/issues"
+  },
+  "homepage": "https://github.com/arcs-/Adminer-Material-Theme#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-sass": "^1.0.0"
+  }
+}
