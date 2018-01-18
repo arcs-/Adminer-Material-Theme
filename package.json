@@ -15,6 +15,10 @@
   "homepage": "https://github.com/arcs-/Adminer-Material-Theme#readme",
   "devDependencies": {
     "grunt": "^1.0.1",
-    "grunt-contrib-sass": "^1.0.0"
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-data-uri": "^0.3.0"
+  },
+  "scripts": {
+    "build": "grunt build"
   }
 }
