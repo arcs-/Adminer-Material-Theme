@@ -297,7 +297,7 @@ input:not([type]), input[type=password], input[type=search], input[type=number] 
   margin-bottom: 6px;
   padding: 8px; /* text */
   border: 1px solid rgba(0,0,0,.12);
-  font-size: 16px;
+  font-size: 15px;
 }
 input[type=search] {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
@@ -410,7 +410,7 @@ input[type=number] {
 /*    Table      */
 /*---------------*/
 table {
-  margin: 25px 0;
+  margin: 38px 0;
   min-width: 600px;
   border: 1px solid rgba(0,0,0,.12);
   border-collapse: collapse;
