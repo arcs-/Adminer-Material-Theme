@@ -1,12 +1,12 @@
 /*!
- * Material Design for Adminer
- * By Patrick Stillhart [https://stillhart.biz/]
- * Converted to SASS-ready file by Troy Meier [https://twkm.ca]
+ * Material Design for Adminer, version 1.1.0
+ * By Patrick Stillhart [https://stillh.art/]
+ * Converted to SASS by Troy Meier [https://twkm.ca]
  */
 
 $header-background-color: #263238;
 
-$primary-color: #1565C0;
+$primary-color: #3F51B5;
 $primary-color-light: lighten($primary-color, 10%);
 $primary-color-dark: darken($primary-color, 20%);
 
@@ -45,8 +45,8 @@ body {
   color: #fff;
 }
 ::-webkit-scrollbar {
-  width: 0.5em;
-  height: 0.8em;
+  width: 9px;
+  height: 12px;
   background-color: #CCC;
 }
 ::-webkit-scrollbar-corner{
@@ -55,6 +55,11 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: $header-background-color;
 }
+::-webkit-scrollbar-corner  {
+  background-color: $header-background-color;
+  width: 8px;
+  height: 8px;
+}
 
 /*    Menu    */
 /*------------*/
@@ -62,7 +67,7 @@ body {
   position: fixed;
   top: auto;
   bottom: 0;
-  z-index: 1;
+  z-index: 3;
   padding: .8em 1em;
   width: 245px;
   border-top: 1px solid #ccc;
@@ -75,7 +80,8 @@ body {
 
 #menu {
   position: fixed;
-  top: 0 ;
+  top: 0;
+  z-index: 2;
   display: flex;
   margin: 0;
   padding: 0;
@@ -284,11 +290,17 @@ select {
 a {
   color: $header-background-color;
 }
+a:hover {
+  text-decoration: none!important;
+}
 input:not([type]), input[type=password], input[type=search], input[type=number] {
   margin-bottom: 6px;
   padding: 8px; /* text */
   border: 1px solid rgba(0,0,0,.12);
   font-size: 16px;
+}
+input[type=search] {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
 }
 input[type=submit] {
   padding: 0 16px;
@@ -297,7 +309,7 @@ input[type=submit] {
   border: none;
   border-radius: 2px;
   background: $primary-color;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
   color: #fff;
   text-transform: uppercase;
   font-size: 14px;
@@ -377,23 +389,23 @@ input[type=number] {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
 .js .column {
-  margin: -7px 0 0 3px;
-  padding: 7px 2px 7px 5px;
-  border: 1px solid rgba(0,0,0,.12);
-  border-radius: 2px;
-  background: #ccc;
+  left: -50px;
+  margin: -6px 0 0 0;
+  padding: 5px 0px 7px 3px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 3px;
+  background: $primary-color-dark;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
 }
 .js .column a {
   margin-right: 3px;
-  padding: 2px 9px 2px 4px;
+  padding: 1px 8px 3px 5px;
   border: 1px solid $primary-color;
   border-radius: 2px;
-  color: $header-background-color;
+  color: #fff;
 }
 .js .column a:hover {
   background: $primary-color;
-  color: #fff;
 }
 /*    Table      */
 /*---------------*/
@@ -413,7 +425,30 @@ form table {
   width: 100%;
 }
 thead td, thead th {
-    background: #fff;
+    background: #ececec;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background: #fafafa;
+      top: -20px;
+      left: -10px;
+      width: 120%;
+      height: 20px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      border-bottom: 1px solid #cecece;
+    }
+
 }
 thead th {
   padding: 0 18px;
@@ -425,8 +460,7 @@ th {
   padding-bottom: 8px;
   width: 20%;
   border-right: none;
-  border-right: 1px solid rgba(0,0,0,.12);
-  border-bottom: 1px solid rgba(0,0,0,.12);
+  border: 1px solid #ececec;
   background: #fff;
   font-weight: normal;
   font-size: 14px;
@@ -435,9 +469,7 @@ td {
   box-sizing: border-box;
   padding: 2px 10px 0px 10px;
   height: 45px;
-  border-right: none;
-  border-right: 1px solid rgba(0,0,0,.12);
-  border-bottom: 1px solid rgba(0,0,0,.12);
+  border: 1px solid #ececec;
   color: #000;
 }
 .odd td {
@@ -492,6 +524,11 @@ sup, #noindex {
   &:hover {
     background: invert($primary-color);
   }
+}
+
+.footer {
+  background: none;
+  position: relative;
 }
 
 /*    content      */
