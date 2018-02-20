@@ -3,9 +3,8 @@ module.exports = function(grunt) {
 		sass: {
 			dist: {
 				options: {
-					style: 'compressed',
-					precision: 3,
-					sourcemap: 'none'
+					outputStyle: 'compressed',
+					precision: 3
 				},
 				files: {
 					"adminer.css": "src/adminer.scss"
@@ -28,7 +27,7 @@ module.exports = function(grunt) {
 		},
 	})
 
-	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-data-uri');
 
 	let taskList = ['sass', 'dataUri'];
