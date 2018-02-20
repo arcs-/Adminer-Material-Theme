@@ -20,7 +20,4 @@ After you've finished modifying, you can then transpile the `adminer.scss` file 
 For this to work you first need to execute `npm install` and `npm install grunt -g`, also check out [this](https://github.com/gruntjs/grunt-contrib-sass#sass-task)
 
 ### Preview
-<img src="http://stillhart.biz/project/adminer/preview.png" alt="a preview"/>
-
-
-<img src="http://stillhart.biz/project/adminer/preview-2.png" alt="a preview"/>
+<img src="http://stillhart.biz/project/adminer/table.png" alt="a preview"/>
