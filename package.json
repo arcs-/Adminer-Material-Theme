@@ -1,6 +1,6 @@
 {
   "name": "adminer-material-theme",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "An Adminer theme inspired by material design.",
   "main": "index.js",
   "repository": {
