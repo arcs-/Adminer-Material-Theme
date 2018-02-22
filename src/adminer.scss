@@ -1,5 +1,5 @@
 /*!
- * Material Design for Adminer, version 1.1.2
+ * Material Design for Adminer, version 1.1.3
  * https://github.com/arcs-/Adminer-Material-Theme
  */
 
@@ -32,6 +32,10 @@ body {
   background    : #FAFAFA;
   font-family   : $font;
   text-rendering: optimizeLegibility !important;
+}
+
+* {
+  outline-color: $primary-color;
 }
 
 ::selection {
@@ -110,22 +114,36 @@ body {
   #logins {
     padding: 10px 14px 0;
     height : 100%;
-  }
 
-  #logins a {
-    display        : inline-block;
-    margin         : 4px 0;
-    padding        : 10px;
-    width          : 92%;
-    border-radius  : 2px;
-    color          : $primary-color;
-    background     : #fff;
-    text-decoration: none;
-    transition     : all .2s;
-  }
+    &:before {
+      content  : 'Saved Logins';
+      display  : block;
+      font-size: 1.2em;
+      margin   : 84px 0 20px;
+    }
 
-  #logins a:hover {
-    background: #CCC;
+    a {
+      display        : inline-block;
+      margin         : 4px 0;
+      padding        : 6px 12px;
+      height         : 36px;
+      width          : 86%;
+      border-radius  : 2px;
+      color          : #fff;
+      background     : $primary-color;
+      box-shadow     : 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+      text-decoration: none;
+      transition     : all .2s;
+      border-radius  : 2px;
+      text-align     : center;
+      font-weight    : bold;
+      font-size      : 13px;
+      line-height    : 30px;
+    }
+
+    a:hover {
+      background: $primary-color-dark;
+    }
   }
 
   &.active {
@@ -311,9 +329,10 @@ input[type=number],
 input[type=password],
 input[type=search],
 input[type=text] {
-  padding  : 8px;
-  border   : 1px solid rgba(0,0,0,.12);
-  font-size: 15px;
+  padding      : 8px;
+  border       : 1px solid rgba(0,0,0,.12);
+  border-radius: 2px;
+  font-size    : 15px;
 }
 
 input[type=search]:first-child {
@@ -644,6 +663,7 @@ sup {
     margin          : 0;
     padding         : 0;
     margin-bottom   : 4px;
+    margin-top      : -40px;
 
     legend {
       display: none;
