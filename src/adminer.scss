@@ -4,7 +4,7 @@
  */
 
 $header-background-color: #263238;
-$primary-color: #0097A7;
+$primary-color: #1E88E5;
 $primary-color-light: lighten($primary-color, 10%);
 $primary-color-dark: darken($primary-color, 20%);
 $inactive-color: #AFB3B5;
@@ -95,11 +95,12 @@ body {
   flex-flow : column;
 
   h1 {
-    height       : 30px;
+    position     : fixed;
+    right        : 54px;
     border-bottom: none;
-    background   : $header-background-color;
-    color        : $inactive-color;
-    line-height  : 23px;
+    font-size    : 12px;
+    background   : transparent;
+    padding      : 4px 0;
   }
 
   select {
@@ -342,7 +343,7 @@ input[type=button][disabled],
 input[type=submit][disabled] {
   background: $inactive-color!important;
   color     : invert($inactive-color);
-  cursor    : default;
+  cursor    : no-drop;
 }
 
 div input[name=delete],
@@ -465,7 +466,7 @@ thead th {
     content   : '';
     position  : absolute;
     background: #fafafa;
-    top       : -21px;
+    top       : -20px;
     left      : -10px;
     width     : 120%;
     height    : 20px;
@@ -632,6 +633,26 @@ sup {
       color     : #fff;
       cursor    : default;
     }
+  }
+
+  form > fieldset:first-child {
+    // search box
+    background-color: transparent;
+    border          : none;
+    box-shadow      : none;
+    float           : right;
+    margin          : 0;
+    padding         : 0;
+    margin-bottom   : 4px;
+
+    legend {
+      display: none;
+    }
+  }
+
+  #form fieldset:nth-of-type(1) {
+    /* wierd "select" box thing */
+    display: none;
   }
 
   fieldset:nth-of-type(2).jsonly {
