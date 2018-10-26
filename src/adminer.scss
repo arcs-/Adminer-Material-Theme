@@ -1,5 +1,5 @@
 /*!
- * Material Design for Adminer, version 1.1.3
+ * Material Design for Adminer, version 1.1.4
  * https://github.com/arcs-/Adminer-Material-Theme
  */
 
@@ -119,7 +119,7 @@ body {
       content  : 'Saved Logins';
       display  : block;
       font-size: 1.2em;
-      margin   : 84px 0 20px;
+      margin   : 40px 0 10px;
     }
 
     a {
@@ -139,11 +139,12 @@ body {
       font-weight    : bold;
       font-size      : 13px;
       line-height    : 30px;
+
+      &:hover {
+        background: $primary-color-dark;
+      }
     }
 
-    a:hover {
-      background: $primary-color-dark;
-    }
   }
 
   &.active {
@@ -287,7 +288,7 @@ a {
   border        : none;
   border-radius : 2px;
   background    : $primary-color;
-  box-shadow    : 0 1px 4px rgba(88, 88, 88, 0.41), 0 2px 3px rgba(88, 88, 88, 0.26);
+  box-shadow    : 0 1px 4px rgba(48, 48, 48, 0.41), 0 2px 3px rgba(0, 0, 0, 0.26);
   color         : #fff;
   text-align    : center;
   text-transform: uppercase;
