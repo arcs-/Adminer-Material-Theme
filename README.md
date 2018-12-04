@@ -21,3 +21,8 @@ For this to work you first need to execute `npm install` and `npm install grunt 
 
 ### Preview
 <img src="https://stillh.art/project/adminer/preview.png" alt="a preview"/>
+
+### unsolvable issues
+until a newer version of Adminer is released
+
+* "Import" - button on table-data view not stylized correctly, due to wrong HTML tag (`div` instead of `fieldset`)
